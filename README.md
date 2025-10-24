@@ -1,3 +1,10 @@
+# Updates
+The UI has been modernized to allow user running the application, to be able to add, view their blogs that they have add.
+This repo has a backend, which can serve as example for those who want to learn how using Java as the backend of this project to pull data, and run the api locally.
+
+# Final Notes
+All of the above changes will be pushed as soon as this project meet contributer standards in design and functionality, the project will be deploy to github.io.
+
 # Blogs
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
