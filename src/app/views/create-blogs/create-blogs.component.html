@@ -1,0 +1,37 @@
+
+
+
+
+<mat-card class="example-card" >
+      <form [formGroup]="createBlog" (submit)="submitData()" >
+      <div class="blogName">
+            <label for="html">Blog Title*</label><br>
+            <input matInput type="text" formControlName="Title"/>
+      </div>
+      <div class="description">
+            <label for="html">Description*</label><br>
+            <textarea style="resize:none" cols="20" rows="5" matInput type="text" formControlName="description"></textarea>
+
+      </div>
+      <div class="author">
+            <label for="html">Author*</label><br>
+            <input matInput type="text" formControlName="Author"/>
+      </div>
+
+
+      <button class="button_submit" (click)="submitData()" mat-raised-button   type="button" >Submit</button>
+
+      
+                              <div *ngIf="this.show">
+                        {{form.value.lessons |json}}
+            </div>
+
+
+
+</form>
+</mat-card>
+
+   
+
+  
+

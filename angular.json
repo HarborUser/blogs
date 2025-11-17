@@ -20,6 +20,7 @@
             "outputPath": "dist/blogs",
             "index": "src/index.html",
             "browser": "src/main.ts",
+          
             "polyfills": [
               "zone.js"
             ],
@@ -32,6 +33,12 @@
             "styles": [
               "src/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+"includePaths": [
+ "@material/layout-grid/mdc-layout-grid.import.scss",
+  "@material/layout-grid/mdc-layout-grid.import.scss"
+]
+},
             "scripts": [],
             "server": "src/main.server.ts",
             "prerender": true,
@@ -65,6 +72,10 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+       
+        "proxyConfig": "src/proxy.conf.json"
+      },
           "configurations": {
             "production": {
               "buildTarget": "blogs:build:production"

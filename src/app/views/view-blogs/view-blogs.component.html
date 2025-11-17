@@ -1,0 +1,53 @@
+
+
+<!-- <p>view-blogs works!</p> NOTE this self ";" can cause string chracter errors. -->
+
+<!-- 
+<table>
+  <tr>
+    <th>Name</th>
+    <th>City</th>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>Sydney</td>
+  </tr>
+  <tr>
+    <td>Lorem</td>
+    <td>Melbourne</td>
+  </tr>
+</table> -->
+<mat-card class="outer-box" appearance="outlined">
+
+  <div class ="grid">
+   <div *ngFor="let index of this.service.testDataOntable let i = index">
+
+    <button matButton class="blog-button" (click)="submitData(i)">
+      {{i}}
+      <h3>{{index.Title}}</h3>
+
+       <p>{{index.Author}}</p>
+    </button>
+   
+   </div>
+</div>
+
+</mat-card>
+
+
+<!-- <section>
+  <div class="example-label">Extended FAB</div>
+  <div class="example-button-row">
+    <div class="example-flex-container">
+      <button style="background-color:lightblue" matFab extended>
+        <mat-icon style="background-color:lightblue">favorite</mat-icon>
+        Basic
+      </button>
+
+      <a matFab extended routerLink=".">
+        <mat-icon>favorite</mat-icon>
+        Link
+      </a>
+    </div>
+  </div>
+</section> -->

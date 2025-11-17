@@ -1,0 +1,28 @@
+.line{
+
+       width: 400px;
+       height: 200px;
+       float: left;
+       margin:20px;
+       border-top: 10px;
+       border-right: 3px solid red;
+}
+.heading{
+
+
+    text-align: center;
+    text-shadow: 1cap;
+    align-items:center;
+    flex-direction:column;
+ 
+}
+
+.text-container{
+       background-color: #fff;
+        border: 2px solid #666;
+        padding: 20px;
+        position: absolute;
+        left:300px;
+        width: 700px;
+        margin-top: 40px;
+}
