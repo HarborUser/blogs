@@ -1,0 +1,95 @@
+@import   "@material/layout-grid/mdc-layout-grid.import.scss";
+section {
+  display: flex;
+  align-items: center;
+}
+
+.example-label {
+  font-size: 14px;
+  margin: 0 16px 0 8px;
+  min-width: 120px;
+}
+
+.outer-box{
+  top:50px;
+  left:140px;
+  height: 500px;
+  max-width: 1000px;
+  border: #22394a;
+  border-style: solid;
+  border-radius: 2pc;
+  background-color: #e7dfd8;
+}
+.blog-button{
+  height: 100px;
+  width: 200px;
+  box-shadow: 10px 10px red;
+  background-color: gray;
+  cursor:pointer;
+  
+}
+.blog-button:hover{
+  font-size: 20px;
+  background-color: aquamarine;
+}
+.grid {
+ 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-gap: 10px;
+  gap:100px;
+  margin-left: 50px;
+  margin-top: 40px;
+}
+
+.grid > div {
+  background-color: lime;
+  height: 50px;
+  width: 50px;
+
+}
+th {
+
+ width: 400px;
+  border-spacing: 10px;
+}
+th {
+  text-align: left;
+}
+th,
+td {
+  padding: 10px;
+  border-bottom: 15px solid transparent;
+  background-color: #dc2626;
+  color: white;
+  background-clip: padding-box;
+}
+.demo-grid {
+
+  margin-bottom: 32px;
+}
+
+.demo-cell {
+  box-sizing: border-box;
+  background-color: #666;
+  height: 200px;
+  padding: 8px;
+  color: white;
+
+  font-size: 1.5em;
+}
+
+// MDC Web's default desktop breakpoint
+@media (min-width: 840px) {
+  .demo-grid .mdc-layout-grid__inner {
+    justify-content: center;
+  }
+
+  // Specify start position for odd cells
+  // :nth-child(2n+1) is more flexible than :nth-child(odd) as you can use this pattern for 3, 4, etc. cells in a row (3n+1, 4n+1 etc.).
+  .demo-cell:nth-child(2n+1) {
+    grid-column-start: 4;
+    
+     
+  }
+}  

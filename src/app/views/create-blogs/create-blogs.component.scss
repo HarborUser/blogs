@@ -1,0 +1,56 @@
+
+.blogName{
+    position:absolute;
+    left:265px;
+    top:50px;
+    width:600px;
+
+}
+
+
+
+.author{
+    position: absolute;
+    top:530px;
+    left:265px;
+
+}
+.description{
+   position: absolute;
+  top:160px;
+  left:260px;
+
+}
+textarea {
+  justify-content: space-between;
+  width: 600px;
+  height: 290px;
+  box-shadow: 4px 4px 0px rgb(136, 133, 133);
+
+}
+
+input {
+    line-height: 2em; // 2em is (2 * default line height)
+    width: 400px;
+    box-shadow: 4px 4px 0px rgb(136, 133, 133);
+}
+
+.example-card {
+
+  position: absolute;
+  top:130px;
+  left:200px;
+  height:700px;
+  width: 990px;
+ border-style: solid;
+ border-radius: 2pc;
+ background-color: #e7dfd8;
+ 
+}
+
+.button_submit{
+    position: absolute;
+    top:620px;
+    left:430px;
+}
+

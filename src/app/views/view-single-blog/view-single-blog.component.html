@@ -1,0 +1,63 @@
+
+  <!-- <div class="line">
+    HELLO
+  </div> -->
+  <!--
+  Create a box around heading <h1> text, and ensure that it goes to the next line.
+  https://stackoverflow.com/questions/72034538/how-can-i-move-text-to-the-next-line
+  -->
+  <div class="text-container">
+    <button mat-button (click)="this.editCurrentBlogSelectedandUpdateIt()"> Edit <span class="material-icons">mode_edit_outline</span></button>
+    <!-- https://fontawesomeicons.com/materialdesign/icons/mode_edit_outline -->
+    <button mat-button (click)="this.navigateRouteBackToViewPage()">Navigage Back</button>
+
+        <button mat-button (click)="this.editCurrentBlogSelectedandUpdateIt()"> Cancel <span class="material-icons">mode_edit_outline</span></button>
+
+    <div class="heading" >
+  
+    {{this.singleBlog}}
+
+    <div id="edit-div">
+      <h1>
+          {{this.currentIndexOfBlog.Title}}
+      </h1>
+
+      <p>
+        {{this.currentIndexOfBlog.description}}
+      </p>
+      
+    </div>
+
+    <div id="divCheckbox" style="display: none;">
+ 
+
+
+      <form [formGroup]="createBlog"  >
+      <div class="blogName">
+            <label for="html">Blog Title*</label><br>
+              <mat-form-field class="example-full-width">
+                <input matInput type="text" formControlName="Title"/>
+              </mat-form-field>
+      
+      </div>
+      <div class="description">
+            <label for="html">Description*</label><br>
+            <textarea style="resize:none" cols="20" rows="5" matInput type="text" formControlName="description"></textarea>
+
+      </div>
+      <div class="author">
+            <label for="html">Author*</label><br>
+            <input matInput type="text" formControlName="Author"/>
+      </div>
+      </form>
+    </div>
+    <!-- <p>
+            Create a box around heading  text, and ensure that it goes to the next line.
+    https://stackoverflow.com/questions/72034538/how-can-i-move-text-to-the-next-line,
+    Create a box around heading text, and ensure that it goes to the next line.
+    https://stackoverflow.com/questions/72034538/how-can-i-move-text-to-the-next-line
+
+    </p> -->
+
+    </div>
+  </div>
