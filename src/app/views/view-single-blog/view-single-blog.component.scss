@@ -10,7 +10,7 @@
 .heading{
 
 
-    text-align: center;
+    text-align: center; 
     text-shadow: 1cap;
     align-items:center;
     flex-direction:column;
@@ -22,7 +22,19 @@
         border: 2px solid #666;
         padding: 20px;
         position: absolute;
-        left:300px;
-        width: 700px;
-        margin-top: 40px;
+        top:200px;
+        width:800px;
+}
+.wrapper{
+   display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;   
+      white-space: pre-wrap;
+}
+
+.description{
+       width: 800px;
+       white-space: pre-wrap;
+        align-items: normal;  
+     
 }

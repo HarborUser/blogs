@@ -11,21 +11,21 @@ section {
 }
 
 .outer-box{
-  top:50px;
-  left:140px;
+  top:100px;
   height: 500px;
-  max-width: 1000px;
-  border: #22394a;
-  border-style: solid;
+  
+   width: 1000px;
+  background-color: #e6cdad;
   border-radius: 2pc;
-  background-color: #e7dfd8;
 }
 .blog-button{
   height: 100px;
   width: 200px;
-  box-shadow: 10px 10px red;
-  background-color: gray;
+  box-shadow: 10px 10px rgb(196, 196, 196);
+     background-color: #dcbc92;
   cursor:pointer;
+  border-radius: 2pc;
+ 
   
 }
 .blog-button:hover{
@@ -93,3 +93,9 @@ td {
      
   }
 }  
+
+.wrapper{
+   display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;   
+}

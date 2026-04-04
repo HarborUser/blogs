@@ -48,7 +48,7 @@ export class CreateBlogsComponent {
       this.createBlog = this.builder.group({
       
         Title:['',[Validators.required]],
-        description:['',[Validators.required]],
+        Description:['',[Validators.required]],
         Author:['',[Validators.required]]
 
       })
@@ -64,7 +64,7 @@ export class CreateBlogsComponent {
       let submitBlog = this.builder.group({
       
         Title:[this.createBlog.get('Title').value,[Validators.required]],
-        description:[this.createBlog.get('description').value,[Validators.required]],
+        Description:[this.createBlog.get('Description').value,[Validators.required]],
         Author:[this.createBlog.get('Author').value,[Validators.required]]
 
       })

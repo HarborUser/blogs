@@ -11,10 +11,11 @@ import { Validators } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormField, MatInput } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-view-single-blog',
   standalone: true,
-  imports: [MatButton, ReactiveFormsModule, MatInput, MatButtonModule, MatFormField, RouterLink],
+  imports: [MatButton,CommonModule, ReactiveFormsModule, MatInput, MatButtonModule, MatFormField, RouterLink],
   templateUrl: './view-single-blog.component.html',
   styleUrl: './view-single-blog.component.scss'
 })
@@ -23,6 +24,7 @@ export class ViewSingleBlogComponent {
   testId:any;
   currentIndexOfBlog:any;
   createBlog:any;
+  submitBlog:any;
   changeDisplay:any
   removedTextToInput:any;
      constructor(private builder:FormBuilder,public service:TransfereService, private router: Router, private activeRoute:ActivatedRoute, protected app:AppComponent){
@@ -45,6 +47,7 @@ export class ViewSingleBlogComponent {
       console.log(this.activeRoute.snapshot)
 
       this.currentIndexOfBlog = this.service.testDataOntable[this.singleBlog]
+      console.log(this.service.testDataOntable)
       //  let bl = this.service.getMessage();
       //  console.log(bl)
         
@@ -55,8 +58,8 @@ export class ViewSingleBlogComponent {
     this.createBlog = this.builder.group({
          
            Title:['',[Validators.required]],
-           description:['',[Validators.required]],
-           Author:['',[Validators.required]]
+           Author:['',[Validators.required]],
+           Description:['',[Validators.required]],
    
          })
    
@@ -67,7 +70,13 @@ export class ViewSingleBlogComponent {
 
     navigateRouteBackToViewPage(){
       let title:any;
-      this.router.navigate(['view'],{queryParams: { title: this.testId }})
+      
+
+      console.log(this.createBlog)
+     this.service.testDataOntable[0] = this.createBlog.value;
+     console.log(this.service.testDataOntable)
+     console.log(this.service.testDataOntable[this.singleBlog]);
+     this.router.navigateByUrl('view');
 
     }
 
@@ -80,8 +89,8 @@ export class ViewSingleBlogComponent {
         this.createBlog = this.builder.group({
             
               Title:[this.currentIndexOfBlog.Title,[Validators.required]],
-              description:[this.currentIndexOfBlog.description,[Validators.required]],
-              Author:[this.currentIndexOfBlog.Author,[Validators.required]]
+              Description:[this.currentIndexOfBlog.Description,[Validators.required]],
+                Author:[this.currentIndexOfBlog.Author,[Validators.required]]
       
             });
 

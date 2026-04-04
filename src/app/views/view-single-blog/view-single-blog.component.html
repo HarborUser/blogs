@@ -6,7 +6,9 @@
   Create a box around heading <h1> text, and ensure that it goes to the next line.
   https://stackoverflow.com/questions/72034538/how-can-i-move-text-to-the-next-line
   -->
-  <div class="text-container">
+
+  <div class="wrapper">
+      <div class="text-container">
     <button mat-button (click)="this.editCurrentBlogSelectedandUpdateIt()"> Edit <span class="material-icons">mode_edit_outline</span></button>
     <!-- https://fontawesomeicons.com/materialdesign/icons/mode_edit_outline -->
     <button mat-button (click)="this.navigateRouteBackToViewPage()">Navigage Back</button>
@@ -21,10 +23,13 @@
       <h1>
           {{this.currentIndexOfBlog.Title}}
       </h1>
-
-      <p>
-        {{this.currentIndexOfBlog.description}}
+      <div *ngFor="let index of this.service.testDataOntable">
+        <p >
+        {{index.Description}}
       </p>
+
+      </div>
+      
       
     </div>
 
@@ -42,14 +47,15 @@
       </div>
       <div class="description">
             <label for="html">Description*</label><br>
-            <textarea style="resize:none" cols="20" rows="5" matInput type="text" formControlName="description"></textarea>
-
+            <textarea style="width: 757px; height: 446px;" cols="20" rows="5" matInput type="text" formControlName="Description"></textarea>
+  
       </div>
       <div class="author">
             <label for="html">Author*</label><br>
             <input matInput type="text" formControlName="Author"/>
       </div>
       </form>
+      <button mat-button (click)="this.navigateRouteBackToViewPage()">Submit</button>
     </div>
     <!-- <p>
             Create a box around heading  text, and ensure that it goes to the next line.
@@ -58,6 +64,9 @@
     https://stackoverflow.com/questions/72034538/how-can-i-move-text-to-the-next-line
 
     </p> -->
-
+     
     </div>
   </div>
+
+  </div>
+

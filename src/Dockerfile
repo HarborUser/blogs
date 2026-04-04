@@ -1,7 +1,7 @@
 FROM node:20
 
 
-WORKDIR /app
+WORKDIR src/app
 
 COPY package*.json ./
 
@@ -13,5 +13,5 @@ ENV PORT=4200
 
 EXPOSE 4200
 
-CMD ["npm", "serve"]
+CMD ["ng", "serve"]
 
